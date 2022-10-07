@@ -32,10 +32,12 @@ function Relogio() {
 }
 
 function App() {
+  const [show, setShow] = useState(true)
   return (
     <>
       <h1>Hello, world!</h1>
-      <Relogio />
+      {show && <Relogio />}
+      {show && <button onClick={() => setShow(false)}>remover primeiro relogio </button>}
       <Relogio />
       <Relogio />
     </>
